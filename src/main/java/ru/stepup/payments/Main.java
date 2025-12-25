@@ -1,31 +1,40 @@
 package ru.stepup.payments;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Dot dot1 = new Dot(1, 3);
-        Dot dot2 = new Dot(5, 8);
 
-        Line line1 = new Line(dot1, dot2);
-        Line line2 = new Line(10, 11, 15, 19);
-        Line line3 = new Line(line1.end, line2.start);
-        System.out.println(line1);
-        System.out.println(line2);
-        System.out.println(line3);
-        System.out.println();
+        Dot dot1 = new Dot(1, 5);
+        Dot dot2 = new Dot(2, 8);
+        Dot dot3 = new Dot(5, 3);
+        Dot dot4 = new Dot(8, 9);
+        List<Dot> dots = new ArrayList<>();
+        dots.add(dot1);
+        dots.add(dot2);
+        dots.add(dot3);
+        dots.add(dot4);
+        PolyLine polyLine1 = new PolyLine(dots);
+        System.out.println("Ломаная: " + polyLine1);
 
-        line3.start.x = 13;
-        line3.start.y = 32;
-        line3.end.x = 54;
-        line3.end.y = 20;
-        System.out.println(line1);
-        System.out.println(line2);
-        System.out.println(line3);
-        System.out.println();
+        double lenghtPoly1 = polyLine1.getLength();
+        System.out.println("Длина Ломаной: " + lenghtPoly1);
 
-        double lenght1 = line1.getLength();
-        double lenght2 = line2.getLength();
-        double lenght3 = line3.getLength();
-        double sum = lenght1 + lenght2 + lenght3;
-        System.out.println("Сумма длинн всех линий: " + sum);
+        List<Line> lines = polyLine1.getLines();
+        System.out.println("Массив Линий " + lines);
+
+        double lenght = 0;
+        for (int i = 0; i < lines.size(); i++) {
+            lenght = lenght + lines.get(i).getLength();
+        }
+        System.out.println("Длина массива Линий: " + lenght);
+
+        System.out.println("Сравнить длину Ломаной и массива Линий: " + (lenght == lenghtPoly1));
+
+        dot2.x = 12;
+        System.out.println("Измененная точка: " + dot2);
+        System.out.println("Измененная ломаная: " + polyLine1);
+        System.out.println("Измененный массив Линий: " + lines);
     }
 }
