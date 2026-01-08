@@ -1,6 +1,6 @@
 package ru.stepup.payments;
 
-public class Fraction {
+public class Fraction extends Number {
     private final Integer numerator;
     private final Integer denominator;
 
@@ -44,4 +44,23 @@ public class Fraction {
         return minus(new Fraction(number, 1));
     }
 
+    @Override
+    public int intValue() {
+        return numerator / denominator;
+    }
+
+    @Override
+    public long longValue() {
+        return numerator / denominator;
+    }
+
+    @Override
+    public float floatValue() {
+        return ((float) numerator) / denominator;
+    }
+
+    @Override
+    public double doubleValue() {
+        return ((double) numerator) / denominator;
+    }
 }
