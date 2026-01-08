@@ -1,6 +1,6 @@
 package ru.stepup.payments;
 
-class Line {
+class Line implements Measurable {
     Dot start;
     Dot end;
 
@@ -20,7 +20,7 @@ class Line {
         return str;
     }
 
-    public Double getLength() {
+    public double getLength() {
         Integer yS = start.y;
         Integer xS = start.x;
         Integer yE = end.y;
