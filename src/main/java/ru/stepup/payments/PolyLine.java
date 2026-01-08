@@ -3,7 +3,7 @@ package ru.stepup.payments;
 import java.util.ArrayList;
 import java.util.List;
 
-class PolyLine {
+class PolyLine implements Measurable {
     List<Dot> dots;
 
     public PolyLine(List<Dot> dots) {
