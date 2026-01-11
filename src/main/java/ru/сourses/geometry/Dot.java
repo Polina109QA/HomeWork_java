@@ -1,4 +1,5 @@
-package ru.stepup.payments;
+package ru.сourses.geometry;
+
 
 class Dot {
     Integer x;

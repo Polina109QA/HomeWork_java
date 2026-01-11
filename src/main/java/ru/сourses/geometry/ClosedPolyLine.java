@@ -1,4 +1,4 @@
-package ru.stepup.payments;
+package ru.сourses.geometry;
 
 import java.util.List;
 

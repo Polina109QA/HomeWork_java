@@ -1,4 +1,5 @@
-package ru.stepup.payments;
+package ru.сourses.students;
+
 
 import java.util.ArrayList;
 import java.util.List;
