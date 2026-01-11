@@ -28,11 +28,15 @@ public class Main {
         System.out.println("Длина замкнутой ломаной: " + lenghtClosedPolyLine1);
 
         System.out.println("Результат задания Полиморфизм №3 Измерение длины");
-        printResult(polyLine1);
-        printResult(closedPolyLine1);
+        ArrayList<Measurable> measurables = new ArrayList<>();
+        measurables.add(polyLine1);
+        measurables.add(closedPolyLine1);
+        printResult(measurables);
     }
 
-    static void printResult(Measurable m) {
-        System.out.println(m.getLength());
+    static void printResult(List<Measurable> measurables) {
+        for (int i = 0; i < measurables.size(); i++) {
+            System.out.println(measurables.get(i).getLength());
+        }
     }
 }
