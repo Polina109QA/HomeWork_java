@@ -1,39 +1,44 @@
 package ru.stepup.payments;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
-        Dot dot1 = new Dot(1, 5);
-        Dot dot2 = new Dot(2, 8);
-        Dot dot3 = new Dot(5, 3);
-        Dot dot4 = new Dot(8, 9);
-        List<Dot> dots = new ArrayList<>();
-        dots.add(dot1);
-        dots.add(dot2);
-        dots.add(dot3);
-        dots.add(dot4);
-        PolyLine polyLine1 = new PolyLine(dots);
-        System.out.println("Ломаная: " + polyLine1);
+        List<Integer> grades = new ArrayList<>();
+        grades.add(5);
+        grades.add(4);
+        grades.add(3);
+        grades.add(5);
+        grades.add(2);
+        Students student1 = new Students("John", grades);
 
-        double lenghtPoly1 = polyLine1.getLength();
-        System.out.println("Длина Ломаной: " + lenghtPoly1);
+        List<Number> numbers1 = new ArrayList<>();
+        numbers1.add(2);
+        numbers1.add(new Fraction(3, 5));
+        numbers1.add(2.3);
+        System.out.println(sumAll(numbers1));
 
-        ClosedPolyLine closedPolyLine1 = new ClosedPolyLine(dots);
-        System.out.println("Замкнутая ломаная: " + closedPolyLine1);
+        List<Number> numbers2 = new ArrayList<>();
+        numbers2.add(3.6);
+        numbers2.add(new Fraction(49, 12));
+        numbers2.add(3);
+        numbers2.add(3.2);
+        System.out.println(sumAll(numbers2));
 
-        double lenghtClosedPolyLine1 = closedPolyLine1.getLength();
-        System.out.println("Длина замкнутой ломаной: " + lenghtClosedPolyLine1);
+        List<Number> numbers3 = new ArrayList<>();
+        numbers3.add(new Fraction(1, 3));
+        numbers3.add(1);
+        System.out.println(sumAll(numbers3));
 
-        System.out.println("Результат задания Полиморфизм №3 Измерение длины");
-        ArrayList<Measurable> measurables = new ArrayList<>();
-        measurables.add(polyLine1);
-        measurables.add(closedPolyLine1);
-        printResult(measurables);
     }
 
-    static void printResult(List<Measurable> measurables) {
-        for (int i = 0; i < measurables.size(); i++) {
-            System.out.println(measurables.get(i).getLength());
+    public static double sumAll(List<Number> numbers) {
+        double sum = 0.0;
+        for (Number number : numbers) {
+            sum += number.doubleValue();
         }
+        return sum;
     }
 }
