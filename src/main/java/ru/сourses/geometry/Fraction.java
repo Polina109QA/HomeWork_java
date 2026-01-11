@@ -1,6 +1,6 @@
-package ru.stepup.payments;
+package ru.сourses.geometry;
 
-public class Fraction extends Number {
+public class Fraction {
     private final Integer numerator;
     private final Integer denominator;
 
@@ -44,23 +44,4 @@ public class Fraction extends Number {
         return minus(new Fraction(number, 1));
     }
 
-    @Override
-    public int intValue() {
-        return numerator / denominator;
-    }
-
-    @Override
-    public long longValue() {
-        return numerator / denominator;
-    }
-
-    @Override
-    public float floatValue() {
-        return ((float) numerator) / denominator;
-    }
-
-    @Override
-    public double doubleValue() {
-        return ((double) numerator) / denominator;
-    }
 }
