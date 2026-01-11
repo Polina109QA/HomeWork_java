@@ -23,5 +23,17 @@ public class Main {
 
         double lenghtClosedPolyLine1 = closedPolyLine1.getLength();
         System.out.println("Длина замкнутой ломаной: " + lenghtClosedPolyLine1);
+
+        System.out.println("Результат задания Полиморфизм №3 Измерение длины");
+        ArrayList<Measurable> measurables = new ArrayList<>();
+        measurables.add(polyLine1);
+        measurables.add(closedPolyLine1);
+        printResult(measurables);
+    }
+
+    static void printResult(List<Measurable> measurables) {
+        for (int i = 0; i < measurables.size(); i++) {
+            System.out.println(measurables.get(i).getLength());
+        }
     }
 }
