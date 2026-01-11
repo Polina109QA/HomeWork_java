@@ -18,20 +18,10 @@ public class Main {
         double lenghtPoly1 = polyLine1.getLength();
         System.out.println("Длина Ломаной: " + lenghtPoly1);
 
-        List<Line> lines = polyLine1.getLines();
-        System.out.println("Массив Линий " + lines);
+        ClosedPolyLine closedPolyLine1 = new ClosedPolyLine(dots);
+        System.out.println("Замкнутая ломаная: " + closedPolyLine1);
 
-        double lenght = 0;
-        for (int i = 0; i < lines.size(); i++) {
-            lenght = lenght + lines.get(i).getLength();
-        }
-        System.out.println("Длина массива Линий: " + lenght);
-
-        System.out.println("Сравнить длину Ломаной и массива Линий: " + (lenght == lenghtPoly1));
-
-        dot2.x = 12;
-        System.out.println("Измененная точка: " + dot2);
-        System.out.println("Измененная ломаная: " + polyLine1);
-        System.out.println("Измененный массив Линий: " + lines);
+        double lenghtClosedPolyLine1 = closedPolyLine1.getLength();
+        System.out.println("Длина замкнутой ломаной: " + lenghtClosedPolyLine1);
     }
 }
