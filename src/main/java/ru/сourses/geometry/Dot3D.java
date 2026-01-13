@@ -1,4 +1,4 @@
-package ru.stepup.payments;
+package ru.сourses.geometry;
 
  public class Dot3D extends Dot {
     Integer z;

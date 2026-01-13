@@ -1,7 +1,7 @@
 package ru.сourses.geometry;
 
 
-class Dot {
+public class Dot {
     Integer x;
     Integer y;
 
