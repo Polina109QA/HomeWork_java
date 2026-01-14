@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 class PolyLine implements Measurable {
-    List<Dot> dots;
+    List<Point> points;
 
-    public PolyLine(List<Dot> dots) {
-        this.dots = dots;
+    public PolyLine(List<Point> points) {
+        this.points = points;
     }
 
     public PolyLine() {
-        dots = new ArrayList<>();
+        points = new ArrayList<>();
     }
 
     public String toString() {
         String str = "Линия [";
-        for (int i = 0; i < dots.size(); i++) {
-            str = str + dots.get(i);
-            if (i != dots.size() - 1) {
+        for (int i = 0; i < points.size(); i++) {
+            str = str + points.get(i);
+            if (i != points.size() - 1) {
                 str += ",";
             }
         }
@@ -27,8 +27,8 @@ class PolyLine implements Measurable {
 
     public List<Line> getLines() {
         List<Line> lines = new ArrayList<>();
-        for (int i = 0; i < dots.size() - 1; i++) {
-            lines.add(new Line(dots.get(i), dots.get(i + 1)));
+        for (int i = 0; i < points.size() - 1; i++) {
+            lines.add(new Line(points.get(i), points.get(i + 1)));
         }
         return lines;
     }
