@@ -1,6 +1,8 @@
 package ru.сourses.geometry;
 
-class Line {
+import java.util.Objects;
+
+public class Line {
     Point start;
     Point end;
 
@@ -29,5 +31,22 @@ class Line {
         int b = xS - xE;
         double res = Math.sqrt((a * a) + (b * b));
         return res;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Line line = (Line) o;
+        return Objects.equals(start, line.start) && Objects.equals(end, line.end);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(start, end);
+    }
+
+    @Override
+    public Line clone() {
+        return new Line(start.clone(), end.clone());
     }
 }
