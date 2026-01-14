@@ -4,13 +4,13 @@ import java.util.List;
 
 public class ClosedPolyLine extends PolyLine {
 
-    public ClosedPolyLine(List<Dot> dots) {
-        super(dots);
+    public ClosedPolyLine(List<Point> points) {
+        super(points);
     }
 
     @Override
     public double getLength() {
-        Line finishLine = new Line(dots.get(0), dots.get(dots.size() - 1));
+        Line finishLine = new Line(points.get(0), points.get(points.size() - 1));
         return super.getLength() + finishLine.getLength();
     }
 }

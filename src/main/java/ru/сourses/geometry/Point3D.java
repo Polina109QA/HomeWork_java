@@ -1,9 +1,9 @@
 package ru.сourses.geometry;
 
- public class Dot3D extends Dot {
+ public class Point3D extends Point {
     Integer z;
 
-    public Dot3D(Integer x, Integer y, Integer z) {
+    public Point3D(Integer x, Integer y, Integer z) {
         super(x, y);
         this.z = z;
     }

@@ -1,14 +1,12 @@
 package ru.сourses.main;
 
-import ru.сourses.geometry.Dot;
-
-import java.awt.*;
+import ru.сourses.geometry.Point;
 
 public class Main {
     public static void main(String[] args) {
-        Dot d1 = new Dot(2, 3);
-        Point p1 = new Point(1, 1);
-        System.out.println(d1);
-        System.out.println(p1);
+        Point d1 = new Point(8, 3);
+        Point d2 = new Point(6, 8);
+        System.out.println(d1.equals(d2));
     }
+
 }
