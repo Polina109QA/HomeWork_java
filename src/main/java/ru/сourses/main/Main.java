@@ -1,14 +1,14 @@
 package ru.сourses.main;
 
-import ru.сourses.geometry.Dot;
-
-import java.awt.*;
+import ru.сourses.kulinaria.Sause;
+import ru.сourses.kulinaria.Sharpness;
 
 public class Main {
     public static void main(String[] args) {
-        Dot d1 = new Dot(2, 3);
-        Point p1 = new Point(1, 1);
-        System.out.println(d1);
-        System.out.println(p1);
+        Sause s1 = new Sause("Шрирача", Sharpness.HARD);
+        Sause s2 = new Sause("Барбекю", Sharpness.LOW);
+        System.out.println(s1);
+        System.out.println(s2);
+
     }
 }
