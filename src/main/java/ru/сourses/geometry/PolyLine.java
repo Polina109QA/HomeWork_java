@@ -2,8 +2,9 @@ package ru.сourses.geometry;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-class PolyLine implements Measurable {
+public class PolyLine implements Measurable {
     List<Point> points;
 
     public PolyLine(List<Point> points) {
@@ -42,4 +43,15 @@ class PolyLine implements Measurable {
         return lenght;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        PolyLine polyLine = (PolyLine) o;
+        return Objects.equals(points, polyLine.points);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(points);
+    }
 }
