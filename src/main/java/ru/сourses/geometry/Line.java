@@ -1,15 +1,15 @@
 package ru.сourses.geometry;
 
 class Line {
-    Dot start;
-    Dot end;
+    Point start;
+    Point end;
 
     public Line(Integer xStart, Integer yStart, Integer xEnd, Integer yEnd) {
-        start = new Dot(xStart, yStart);
-        end = new Dot(xEnd, yEnd);
+        start = new Point(xStart, yStart);
+        end = new Point(xEnd, yEnd);
     }
 
-    public Line(Dot start, Dot end) {
+    public Line(Point start, Point end) {
         this.start = start;
         this.end = end;
     }
