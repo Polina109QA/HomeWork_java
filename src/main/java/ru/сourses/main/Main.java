@@ -1,13 +1,19 @@
 package ru.сourses.main;
 
-import ru.сourses.kulinaria.Sause;
-import ru.сourses.kulinaria.Sharpness;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Sause s1 = new Sause("Шрирача", Sharpness.HARD);
-        Sause s2 = new Sause("Барбекю", Sharpness.LOW);
-        System.out.println(s1);
-        System.out.println(s2);
+        String str = new Scanner(System.in).nextLine();
+        String[] s = str.split(" ");
+        double res = 0;
+        for (int i = 2; i < s.length; i++) {
+            try {
+                res += Double.parseDouble(s[i]);
+            } catch (NumberFormatException e) {
+                res += 0;
+            }
+        }
+        System.out.println(res);
     }
 }
