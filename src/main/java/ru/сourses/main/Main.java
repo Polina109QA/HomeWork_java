@@ -1,16 +1,13 @@
 package ru.сourses.main;
 
-import ru.сourses.geometry.Point;
+import ru.сourses.kulinaria.Sause;
+import ru.сourses.kulinaria.Sharpness;
 
 public class Main {
     public static void main(String[] args) {
-        Point d1 = new Point(8, 3);
-        Point d2 = new Point(8, 3);
-        System.out.println(d1 == d2); //false
-        System.out.println(d1.equals(d2)); //true
-        Point d3 = d2.clone();
-        System.out.println(d3 == d2); //false
-        System.out.println(d3.equals(d2)); //true
+        Sause s1 = new Sause("Шрирача", Sharpness.HARD);
+        Sause s2 = new Sause("Барбекю", Sharpness.LOW);
+        System.out.println(s1);
+        System.out.println(s2);
     }
-
 }
