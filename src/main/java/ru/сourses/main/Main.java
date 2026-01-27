@@ -9,6 +9,5 @@ public class Main {
         Sause s2 = new Sause("Барбекю", Sharpness.LOW);
         System.out.println(s1);
         System.out.println(s2);
-
     }
 }
