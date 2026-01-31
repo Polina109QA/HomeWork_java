@@ -1,13 +1,14 @@
 package ru.сourses.main;
 
-import ru.сourses.kulinaria.Sause;
-import ru.сourses.kulinaria.Sharpness;
+import java.util.Arrays;
+
+import static ru.сourses.collections.BubbleSort.bubbleSort;
 
 public class Main {
     public static void main(String[] args) {
-        Sause s1 = new Sause("Шрирача", Sharpness.HARD);
-        Sause s2 = new Sause("Барбекю", Sharpness.LOW);
-        System.out.println(s1);
-        System.out.println(s2);
+        int[] numbers = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println("Исходный массив: " + Arrays.toString(numbers));
+        bubbleSort(numbers);
+        System.out.println("Отсортированный массив: " + Arrays.toString(numbers));
     }
 }
