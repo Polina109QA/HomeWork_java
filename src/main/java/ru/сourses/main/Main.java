@@ -1,21 +1,20 @@
 package ru.сourses.main;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import ru.сourses.animals.Cat;
+import ru.сourses.animals.ObjectNullifier;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        int n = 30;
+    public static void main(String[] args) throws IllegalAccessException {
+        List<String> friends = Arrays.asList("Барсик", "Мурзик");
+        Cat cat = new Cat("Вася", 5, friends);
 
-        ArrayList<Integer> list = new ArrayList<>(n);
-        for (int i = 0; i <= n; i += 2) {
-            list.add(i);
-        }
-        System.out.println(list);
+        System.out.println("До обнуления: " + cat);
 
-        for (int i = 0; i < list.size() - 1; i += 2) {
-            Collections.swap(list, i, i + 1);
-        }
-        System.out.println(list);
+        ObjectNullifier.nullifyObject(cat);
+
+        System.out.println("После обнуления: " + cat);
     }
 }
